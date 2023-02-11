@@ -1,0 +1,249 @@
+* {
+  font-family: "Roboto, sans-serif";
+}
+header {
+  position: relative; /* относится к сдвигу шапки и секции(наползание друг на друга) */
+}
+nav {
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  height: 50px;
+  background-color: #212121;
+}
+.menu {
+  display: flex;
+  justify-content: space-between; /* выравниваем блоки по горизонту(друг за другом) */
+  padding: 13px 70px; /* увеличить с 10 до 13 чтобы выставить menu  по центру 50px-44px по факту разделить на 2 */
+  margin: 0;
+  list-style-type: none; /* убираем маркировочные точки */
+}
+.menu .menu_link {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 300;
+}
+.menu .menu_item {
+  border-right: 2px dotted black; /* dotted- точки */
+  padding-right: 28px;
+}
+.subheader {
+  margin-top: 50px;
+  position: absolute; /* 1й способ-absolute, 2й способ сдвига секции и шапки- relative */
+  width: 100%; /* относится к 1му способу сдвига */
+  height: 84px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /*  .6 - альфа канал прозрачности - 0.60% */
+  /* z-index: 2; второй способ сдвига */
+}
+.subheader .subheader_logo {
+  /* ссылка всегда является строчным элементом,маджины на строку не работают! */
+  display: block; /* обязательно прописывать!,чтобы применить margin-top  к строчному элементу текста */
+  max-width: 100%; /* в случае замены логотипа картинка не меняется по ширине */
+  margin-top: 19px;
+}
+.subheader_official {
+  margin-top: 0px;
+  opacity: 0.5;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 13px;
+}
+.subheader_call {
+  margin-top: 19px;
+  color: #ffffff;
+  text-align: right;
+  font-weight: 300;
+  font-size: 12px;
+}
+.subheader_phone {
+  display: block;
+  margin-top: 14px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 22px;
+  text-align: right;
+  line-height: 12px; /*  ставиться если текст не влезает по длинне */
+  text-decoration: none; /* убирается подчеркивание ссылки */
+}
+.subheader .subheader_btn {
+  display: block;
+  margin-top: 19px;
+  width: 172px;
+  height: 46px;
+  border: none;
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  box-shadow: inset 0px -3px 0px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+a:visited,
+a:focus,
+a:hover {
+  color: #ffffff;
+}
+.promo {
+  min-height: 800px;
+  background: url(../img/uber_bg.jpg) center center/cover no-repeat;
+  padding: 150px 0 135px 0; /* отступ по тексту promo_header,promo_subheader снверху и снизу */
+  /*transform: translateY(-84px);  2й способ сдвига секции (наезжает одна на другую) относительно шапки 
+    z-index: 1; 2й способ сдвига секции*/
+}
+.promo .promo_header {
+  font-weight: 700;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 60px;
+  margin: 0; /* для того,чтобы убрать стандартные margin-bottom  */
+  text-align: center;
+}
+.promo .promo_subheader {
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: #ffffff;
+  line-height: 36px;
+  margin: 0;
+  margin-top: 22px;
+  text-align: center;
+}
+.promo .promo_descr {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 23px;
+}
+.promo .promo_btn {
+  display: block;
+  margin: 118px auto 0 auto;
+  width: 259px;
+  height: 63px;
+  background: linear-gradient(0deg, #1eacc7 0%, #4ce2ff 100%);
+  border-radius: 4px;
+  border: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 18px;
+}
+.reasons {
+  padding: 71px 0 65px 0;
+}
+
+.label {
+  margin: 0 auto;
+  height: 24px;
+  width: 112px;
+  padding: 5px 12px;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
+.label_white {
+  background-color: #fff;
+  color: #000;
+}
+
+.title {
+  margin-bottom: 0;
+  margin-top: 38px;
+  color: #222222;
+  font-size: 38px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+}
+.title_white {
+  color: #fff;
+}
+
+.subtitle {
+  position: relative;
+  margin-top: 19px;
+  color: #222222;
+  font-size: 17px;
+  font-weight: 400;
+  text-align: center;
+  z-index: 2;
+}
+.subtitle_white {
+  color: #fff;
+}
+
+.reasons .reasons_block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 35px;
+}
+
+.reasons .reasons_block .reasons_round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 26px;
+  width: 113px;
+  height: 113px;
+  background-color: #1eacc7;
+  border-radius: 100%;
+}
+
+.reasons .reasons_block .reasons_descr {
+  width: 343px;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_subtitle {
+  line-height: 21px;
+  color: #1eacc7;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.reasons .reasons_block .reasons_descr .reasons_text {
+  color: #202020;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 21px;
+}
+
+.choice {
+  position: relative;
+  min-height: 895px;
+  padding: 57px 0 138px 0;
+  background: url("../img/mobile_app.png") center center/cover no-repeat;
+}
+.choice_img {
+  position: relative;
+  display: block;
+  margin: 56px auto 0 auto;
+  z-index: 2;
+}
+.choice_descr {
+  text-align: center;
+  color: #222222;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 24px;
+}
+.choice .black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 499px;
+  width: 100%;
+  background-color: #070716;
+  z-index: 1;
+}
